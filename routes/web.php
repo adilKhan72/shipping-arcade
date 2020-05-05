@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Auth::routes();
+Route::get('register_company', ['as' => 'register_company', 'uses' => 'UserController@registerCompany']);
+Route::get('compare_company', ['as' => 'compare_company', 'uses' => 'UserController@compareCompany']);
+Route::get('/home', 'HomeController@index')->name('home');
