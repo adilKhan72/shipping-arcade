@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 Auth::routes();
 Route::get('register_company', ['as' => 'register_company', 'uses' => 'UserController@registerCompany']);
