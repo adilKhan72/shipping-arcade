@@ -13,10 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/',['as' => 'index', 'uses' => 'HomeController@index']);
+Route::get('about', ['as' => 'about', 'uses' => 'HomeController@About']);
+Route::get('blog', ['as' => 'blog', 'uses' => 'HomeController@Blog']);
+Route::get('contact', ['as' => 'contact', 'uses' => 'HomeController@Contact']);
+Route::get('industries', ['as' => 'industries', 'uses' => 'HomeController@Industries']);
+Route::get('services', ['as' => 'services', 'uses' => 'HomeController@Services']);
+Route::get('register_company', ['as' => 'register_company', 'uses' => 'HomeController@registerCompany']);
+Route::get('compare_companies', ['as' => 'compare_companies', 'uses' => 'HomeController@compareCompanies']);
 Auth::routes();
-Route::get('register_company', ['as' => 'register_company', 'uses' => 'UserController@registerCompany']);
-Route::get('compare_company', ['as' => 'compare_company', 'uses' => 'UserController@compareCompany']);
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'UserController@loggedIn')->name('home');

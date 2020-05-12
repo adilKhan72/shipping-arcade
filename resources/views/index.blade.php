@@ -8,7 +8,7 @@
             
 
             <h1 class="text-white font-weight-light mb-5 text-uppercase font-weight-bold">Worldwide Freight Services</h1>
-            <p><a href="#" class="btn btn-primary py-3 px-5 text-white">Get Started!</a></p>
+            <p><a href="{{ route('compare_companies') }}" class="btn btn-primary py-3 px-5 text-white">Compare Companies</a></p>
 
           </div>
         </div>

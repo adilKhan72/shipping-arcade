@@ -6,10 +6,14 @@
               <div class="col-md-3">
                 <h2 class="footer-heading mb-4">Quick Links</h2>
                 <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Services</a></li>
-                  <li><a href="#">Testimonials</a></li>
-                  <li><a href="#">Contact Us</a></li>
+                <li><a style="{{ (request()->is('/')) ? 'color: #f89d13;' : ''}}" href="{{ route('index') }}">Home</a></li>
+                <li><a style="{{ Request::path() == 'about' ? 'color: #f89d13;' : ''}}" href="{{ route('about') }}">About Us</a></li>
+                <li>
+                  <a style="h{{ (request()->is('services')) ? 'color: #f89d13;' : ''}}" href="{{ route('services') }}">Services</a>
+                </li>
+                <li><a  style="{{ (request()->is('industries')) ? 'color: #f89d13;' : ''}}" href="{{ route('industries') }}">Industries</a></li>
+                <li><a style="{{ (request()->is('blog')) ? 'color: #f89d13;' : ''}}" href="{{ route('blog') }}">Blog</a></li>
+                <li ><a  style="{{ (request()->is('contact')) ? 'color: #f89d13;' : ''}}" href="{{ route('contact') }}">Contact</a></li>
                 </ul>
               </div>
               <div class="col-md-3">
@@ -56,7 +60,7 @@
             <div class="border-top pt-5">
             <p>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | {{ config('app.name', 'Shipping Arcade') }}
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
             </div>

@@ -11,19 +11,18 @@ class UserController extends Controller
      *
      * @return void
      */
-
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function compareCompany()
+    public function loggedIn()
     {
-        return view('compare_company');
+        return view('home');
     }
 
-    public function registerCompany()
-    {
-        return view('register_company');
-    }
 }

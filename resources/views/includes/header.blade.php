@@ -14,28 +14,26 @@
       <div class="container">
         <div class="row align-items-center">
           
-          <div class="col-11 col-xl-2">
-            <h1 class="mb-0"><a href="index.html" class="text-white h2 mb-0">Logistics</a></h1>
+          <div class="col-11 col-xl-4">
+            <h1 class="mb-0"><a href="{{ route('index') }}" class="text-white h2 mb-0">{{ config('app.name', 'Shipping Arcade') }}</a></h1>
           </div>
-          <div class="col-12 col-md-10 d-none d-xl-block">
+          <div class="col-12 col-md-8 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
 
               <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                <li class="active"><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
+                <li class="{{ (request()->is('/')) ? 'active' : ''}}"><a href="{{ route('index') }}">Home</a></li>
+                <li class="{{ Request::path() == 'about' ? 'active' : ''}}"><a href="{{ route('about') }}">About Us</a></li>
                 <li class="has-children">
-                  <a href="services.html">Services</a>
+                  <a href="#">More</a>
                   <ul class="dropdown">
-                    <li><a href="#">Air Freight</a></li>
-                    <li><a href="#">Ocean Freight</a></li>
-                    <li><a href="#">Ground Shipping</a></li>
-                    <li><a href="#">Warehousing</a></li>
-                    <li><a href="#">Storage</a></li>
+                  <li class=" {{ (request()->is('services')) ? 'active' : ''}}"><a href="{{ route('services') }}">Services</a></li>
+                  <li  class="{{ (request()->is('industries')) ? 'active' : ''}}"><a href="{{ route('industries') }}">Industries</a></li>
+                <li class="{{ (request()->is('blog')) ? 'active' : ''}}"><a href="{{ route('blog') }}">Blog</a></li>
+                <li  class="{{ (request()->is('contact')) ? 'active' : ''}}"><a href="{{ route('contact') }}">Contact</a></li>
                   </ul>
                 </li>
-                <li><a href="industries.html">Industries</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                
+                <li  class="{{ (request()->is('register_company')) ? 'active' : ''}}"><a href="{{ route('register_company') }}">Are you a Company ?</a></li>
               </ul>
             </nav>
           </div>
