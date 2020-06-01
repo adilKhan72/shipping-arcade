@@ -1,18 +1,78 @@
 @extends('layouts.app')
 @section('content')
-<div class="site-blocks-cover overlay" style="background-image: url(images/hero_bg_1.jpg);" data-aos="fade" data-stellar-background-ratio="0.5">
-      <div class="container">
-        <div class="row align-items-center justify-content-center text-center">
+<div class="site-blocks-cover overlay"  data-aos="fade" data-stellar-background-ratio="0.5">
+     
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel" style="height:800px;" >
+  <div class="carousel-inner" style="height:800px;">
 
-          <div class="col-md-8" data-aos="fade-up" data-aos-delay="400">
-            
+  <div class="carousel-item active" style="height:800px;">
+      <img class="d-block w-100" style="height:800px; 
+      background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(images/index_slider_img1.jpeg);
 
-            <h1 class="text-white font-weight-light mb-5 text-uppercase font-weight-bold">Worldwide Freight Services</h1>
+        background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+      "  >
+      <!-- <div class="carousel-caption d-md-block" style="top:100px;">
+      <h1 class="text-white font-weight-light mb-5 text-uppercase font-weight-bold">Worldwide Freight Services</h1>
             <p><a href="{{ route('compare_companies') }}" class="btn btn-primary py-3 px-5 text-white">Compare Companies</a></p>
 
-          </div>
-        </div>
-      </div>
+  </div> -->
+    </div>
+ 
+    <div class="carousel-item" style="height:800px;">
+      <img class="d-block w-100" style="height:800px;
+       background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(images/index_slider_img2.jpeg);
+      
+        background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+      ">
+
+
+    </div>
+
+     
+    <div class="carousel-item" style="height:800px;">
+      <img class="d-block w-100" style="height:800px;
+       background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.5), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        url(images/index_slider_img3.jpeg);
+      
+        background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+      ">
+
+
+    </div>
+
+    <!-- <div class="carousel-item">
+      <img class="d-block w-100" src="..." alt="Third slide">
+    </div> 
+  <div class="carousel-caption d-none d-md-block">
+    <h5>...</h5>
+    <p>...</p>
+  </div>
+-->
+  </div>
+</div>
+
+
+    
     </div>  
 
     <div class="container">

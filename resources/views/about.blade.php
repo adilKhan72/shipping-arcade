@@ -23,12 +23,15 @@
           </div>
           <div class="col-md-6 order-md-1" data-aos="fade">
             <div class="text-left pb-1 border-primary mb-4">
-              <h2 class="text-primary">Our History</h2>
+              <h2 class="text-primary">About Us</h2>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis deleniti reprehenderit animi est eaque corporis! Nisi, asperiores nam amet doloribus, soluta ut reiciendis. Consequatur modi rem, vero eos ipsam voluptas.</p>
-            <p class="mb-5">Error minus sint nobis dolor laborum architecto, quaerat. Voluptatum porro expedita labore esse velit veniam laborum quo obcaecati similique iusto delectus quasi!</p>
+            <p>Thanks for taking the time to learn more about ShippingArcade and what we do. If you have been searching for shipping companies to help with your shipping needs, but you’re struggling to make the connections, then ShippingArcade is here to help!
+At ShippingArcade, bridging the gap is more than a tag line.  We truly bridge the gap by helping our clients connect with shipping companies to ensure that their freight gets to where it needs to be on time and on schedule.</p>
+            <p class="mb-5">In the shipping industry, it’s not always easy to establish a single point of market place where you can connect with local, small or large multi-national companies. Scouting through different websites of multiple companies with several offerings can make it difficult to ship goods locally or around the world and can lead to a lot of frustration.</p>
+            <p class="mb-5">Don’t panic, though! At ShippingArcade, we’ve done the work for you and built you a convenient market place where you can easily search for your desired shipping company without the headache of searching through several sites.</p>
+            <p class="mb-5">Let us help bridge the gap between you and the shipping company of your choice!</p>
 
-            <div class="row">
+            <!-- <div class="row">
               <div class="col-md-12 mb-md-5 mb-0 col-lg-6">
                 <div class="unit-4">
                   <div class="unit-4-icon mb-3 mr-4"><span class="text-primary flaticon-frontal-truck"></span></div>
@@ -49,7 +52,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
           
         </div>

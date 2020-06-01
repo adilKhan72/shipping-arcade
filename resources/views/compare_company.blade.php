@@ -16,21 +16,30 @@
     <div class="site-section bg-light">
       <div class="container">
         <div class="row">
-          <div class="col-md-7 mb-5">
+          <div class="col-md-12 mb-5">
 
             
-
-            <form action="#" class="p-5 bg-white">
-             
-
-              <div class="row form-group">
+          @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+            <form method="post"  action="{{action('HomeController@compareCompaniesSubmit')}}" accept-charset="UTF-8" class="p-5 bg-white">
+            @csrf
+            <label class="text-black" for="subject"><b>Compare Company</b></label>
+            <hr/>
+              <!-- <div class="row form-group">
                 <div class="col-md-6 mb-3 mb-md-0">
-                  <label class="text-black" for="fname">First Name</label>
-                  <input type="text" id="fname" class="form-control">
+                  <label class="text-black" for="fname">Full Name</label>
+                  <input name="name" type="text" id="name" class="form-control" required>
                 </div>
                 <div class="col-md-6">
-                  <label class="text-black" for="lname">Last Name</label>
-                  <input type="text" id="lname" class="form-control">
+                  <label class="text-black" for="lname">Phone Number</label>
+                  <input name="number" type="number" id="lname" class="form-control" required>
                 </div>
               </div>
 
@@ -38,35 +47,116 @@
                 
                 <div class="col-md-12">
                   <label class="text-black" for="email">Email</label> 
-                  <input type="email" id="email" class="form-control">
+                  <input name="email" type="email" id="email" class="form-control" required>
                 </div>
-              </div>
-
+              </div> 
+              <hr/>-->
+              <label class="text-black" for="subject"><b>Moving From</b></label> 
+              
               <div class="row form-group">
                 
-                <div class="col-md-12">
-                  <label class="text-black" for="subject">Subject</label> 
-                  <input type="subject" id="subject" class="form-control">
+                <div class="col-md-6">
+                  <label class="text-black" for="subject">Street</label> 
+                  <input type="text" name="street-from" id="subject" class="form-control" >
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="subject">Postal Code</label> 
+                  <input type="text" name="postal-code-from" id="subject" class="form-control" >
+                </div>
+                </div>
+                <div class="row form-group">
+                <div class="col-md-6">
+                <label class="text-black">City*</label>
+                  <select name="city_id_from" class="select2 select_city" id="" data-placeholder="Select a State" style="width: 100%;" required>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="subject">Country*</label> 
+                  <select name="country_id_from" class="select2 select_country" id="" data-placeholder="Select a Country" style="width: 100%;" required>
+                </select>
+                </div>
+              </div>
+              <!-- <div class="row form-check "> 
+                <div class="col-md-6 ">
+                  <input class="form-check-input" type="checkbox" name="storage" value="storage">
+                  <label class="form-check-label" for="defaultCheck1">
+                  I will require storage
+                  </label>
+                </div>
+                <div class="col-md-6 ">
+                  <input class="form-check-input" type="checkbox" name="elevator" value="elevator">
+                  <label class="form-check-label" for="defaultCheck1">
+                  Elevator available?
+                  </label>
+                </div>
+                
+              </div> -->
+              <hr/>
+
+              <label class="text-black" for="subject"><b>Moving To</b></label> 
+              
+              <div class="row form-group">
+                
+                <div class="col-md-6">
+                  <label class="text-black" for="subject">Street</label> 
+                  <input name="street-to" type="text" id="subject" class="form-control" > 
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="subject">Postal Code</label> 
+                  <input type="text" name="postal-code-to" id="subject" class="form-control" >
+                </div>
+                </div>
+                <div class="row form-group">
+                <div class="col-md-6">
+                <label class="text-black">City*</label>
+                  <select name="city_id_to" class="select2 select_city" id="" data-placeholder="Select a State" style="width: 100%;" required>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label class="text-black" for="subject">Country*</label> 
+                  <select name="country_id_to" class="select2 select_country" id="" data-placeholder="Select a Country" style="width: 100%;" required>
+                </select>
                 </div>
               </div>
 
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <label class="text-black" for="message">Message</label> 
-                  <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+
+
+<!-- 
+              <div class="row form-check "> 
+                <div class="col-md-6 ">
+                  <input class="form-check-input" type="checkbox" value="children"  name="children" >
+                  <label class="form-check-label" >
+                  Children
+                  </label>
                 </div>
-              </div>
+                </div>
+              <div class="row form-check "> 
+                <div class="col-md-6 ">
+                  <input class="form-check-input" type="checkbox" value="pets" name="pets">
+                  <label class="form-check-label" >
+                  Pets
+                  </label>
+                </div>
+                </div>
+              <div class="row form-check "> 
+                <div class="col-md-6 ">
+                  <input class="form-check-input" type="checkbox" value="car" name="car" >
+                  <label class="form-check-label">
+                  Car
+                  </label>
+                </div>
+              </div> -->
 
               <div class="row form-group">
                 <div class="col-md-12">
-                  <input type="submit" value="Send Message" class="btn btn-primary py-2 px-4 text-white">
+                  <input type="submit" value="Compare" class="btn btn-primary py-2 px-4 text-white">
                 </div>
               </div>
 
   
             </form>
           </div>
-          <div class="col-md-5">
+          <!-- <div class="col-md-5">
             
             <div class="p-4 mb-3 bg-white">
               <p class="mb-0 font-weight-bold">Address</p>
@@ -86,8 +176,56 @@
               <p><a href="#" class="btn btn-primary px-4 py-2 text-white">Learn More</a></p>
             </div>
 
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
 @endsection
+@section('jquery')
+  <script>
+  $(document).ready(function(){
+  
+    $('.select_country').select2({
+      ajax: {
+        url: '{{URL::route("country_select")}}',
+        type: "post",
+        dataType: 'json',
+        delay: 250,
+        data: function (params) {
+           return {
+            "_token": "{{ csrf_token() }}",
+              searchTerm: params.term // search term
+           };
+        },
+        processResults: function (response) {
+           return {
+              results: response
+           };
+        },
+        cache: true
+      }
+    });
+
+    $('.select_city').select2({
+      ajax: {
+        url: '{{URL::route("city_select")}}',
+        type: "post",
+        dataType: 'json',
+        delay: 250,
+        data: function (params) {
+           return {
+            "_token": "{{ csrf_token() }}",
+              searchTerm: params.term // search term
+           };
+        },
+        processResults: function (response) {
+           return {
+              results: response
+           };
+        },
+        cache: true
+      }
+    });
+  });
+    </script>
+  @endsection

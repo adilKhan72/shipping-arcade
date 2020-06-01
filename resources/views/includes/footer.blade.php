@@ -84,3 +84,5 @@
   <script src="{{ asset('js/aos.js') }}"></script>
 
   <script src="{{ asset('js/main.js') }}"></script>
+  <!-- Select2 -->
+<script src="{{ asset('plugins/select2/js/select2.full.min.js') }}"></script>

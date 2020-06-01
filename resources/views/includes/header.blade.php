@@ -15,7 +15,9 @@
         <div class="row align-items-center">
           
           <div class="col-11 col-xl-4">
-            <h1 class="mb-0"><a href="{{ route('index') }}" class="text-white h2 mb-0">{{ config('app.name', 'Shipping Arcade') }}</a></h1>
+            <h1 class="mb-0"><a href="{{ route('index') }}" class="text-white h2 mb-0">
+            <img style="height:50px;" src="{{ URL::asset('images/transparen_logo.png') }}" alt="">
+            </a></h1>
           </div>
           <div class="col-12 col-md-8 d-none d-xl-block">
             <nav class="site-navigation position-relative text-right" role="navigation">
@@ -32,14 +34,14 @@
                 <li  class="{{ (request()->is('contact')) ? 'active' : ''}}"><a href="{{ route('contact') }}">Contact</a></li>
                   </ul>
                 </li>
-                
+                <li  class="{{ (request()->is('compare_companies')) ? 'active' : ''}}"><a href="{{ route('compare_companies') }}">Compare</a></li>
                 <li  class="{{ (request()->is('register_company')) ? 'active' : ''}}"><a href="{{ route('register_company') }}">Are you a Company ?</a></li>
               </ul>
             </nav>
           </div>
 
 
-          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3"></span></a></div>
+          <div class="d-inline-block d-xl-none ml-md-0 mr-auto py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-white"><span class="icon-menu h3" style="Color:#958465;"></span></a></div>
 
           </div>
 

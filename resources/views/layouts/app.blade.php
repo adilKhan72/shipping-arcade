@@ -10,7 +10,11 @@
        
     @yield('content')
 
+    
+    
     @include('includes.footer')
     </div>
+@yield('javascript')
+@yield('jquery')
 </body>
 </html>

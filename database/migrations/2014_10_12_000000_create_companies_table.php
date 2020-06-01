@@ -21,9 +21,10 @@ class CreateCompaniesTable extends Migration
             $table->unsignedInteger('country_id');
             $table->string('postal_code');
             $table->string('website');
-            $table->string('vat_number')->nullable();
-            $table->json('address');
-            $table->json('leads_from_countries_ids');
+            $table->string('place_id')->nullable();
+            $table->string('address');
+            $table->string('leads_from_countries_ids')->nullable();
+            $table->string('leads_from_cities_ids')->nullable();
             $table->timestamps();
         });
     }
